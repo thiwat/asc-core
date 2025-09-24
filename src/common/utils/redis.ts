@@ -8,6 +8,8 @@ export const getRedisOpts = (url) => {
   const result = {
     host: urlObject.hostname,
     port: +urlObject.port || 6379,
+    username: urlObject.username,
+    password: urlObject.password,
     db: urlObject.pathname
       ? +urlObject.pathname.replace('/', '')
       : 0
